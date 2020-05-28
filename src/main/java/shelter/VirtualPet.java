@@ -30,7 +30,7 @@ public class VirtualPet {
         this.happinessLevel = happinessLevel;
     }
 
-    public String setName() {
+    public String getName() {
         return name;
     }
 
@@ -54,7 +54,7 @@ public class VirtualPet {
         String hungerLevelString = String.valueOf(hungerLevel);
         String thirstLevelString = String.valueOf(thirstLevel);
         String happinessLevelString = String.valueOf(happinessLevel);
-        return (hungerLevelString + "" + thirstLevelString + "" + happinessLevelString + "");
+        return (hungerLevelString + "|" + thirstLevelString + "|" + happinessLevelString + "");
     }
 
     public void feed(int hungerLevelNew) {
@@ -62,7 +62,7 @@ public class VirtualPet {
     }
 
     public void water(int thirstLevelNew) {
-        thirstLevel = thirstLevel + thirstLevelNew;
+        thirstLevel = thirstLevel - thirstLevelNew;
     }
 
     public void cuddle(int happinessLevelNew) {

@@ -28,21 +28,24 @@ public class VirtualPetShelterApp {
 
             System.out.println("What would you like to do ?");
             System.out.println("Press 1 to Feed the Pets.");
-            System.out.println("Press 2 to give the Pets a drink.");
-            System.out.println("Press 3 to cuddle the wittle Buns.");
-            System.out.println("Press 4 admit a Bun.");
-            System.out.println("Press 5 to adopt a Bun.");
-            System.out.println("Press 6 to EXIT and abandon the Buns.");
+            System.out.println("Press 2 to Give the Pets a drink.");
+            System.out.println("Press 3 to Cuddle the Wittle Buns.");
+            System.out.println("Press 4 to Admit a Bun.");
+            System.out.println("Press 5 to Adopt a Bun.");
+            System.out.println("Press 6 to EXIT and Abandon the Buns.");
             String userInput = input.nextLine();
 
             if (userInput.equals("1")) {
                 bunnyShelter.feedAllPets();
+                bunnyShelter.tick();
             }
             if (userInput.equals("2")) {
                 bunnyShelter.waterAllPets();
+                bunnyShelter.tick();
             }
             if (userInput.equals("3")) {
                 bunnyShelter.cuddleAllPets();
+                bunnyShelter.tick();
             }
             if (userInput.equals("4")) {
                 String petDescription;
@@ -66,6 +69,7 @@ public class VirtualPetShelterApp {
             }
 
         }
+        //bunnyShelter.tick();
 
 
     }
