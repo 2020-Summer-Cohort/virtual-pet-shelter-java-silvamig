@@ -1,7 +1,10 @@
 package shelter;
 
 import java.util.Scanner;
-
+/*
+ * Missing the requirement to be able to interact with an individual pet, maybe change your cuddle with all
+ * to cuddle with a pet instead of cuddle with all pets.
+ */
 public class VirtualPetShelterApp {
     public static void main(String[] args) {
 

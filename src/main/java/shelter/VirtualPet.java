@@ -1,5 +1,19 @@
 package shelter;
-
+/*
+ * Mignonne, this is really close to being a passing project!  The VirtualPet class looks good other
+ * than a couple notes.
+ * - The method `setName()` should be named `getName()`.  Getters and setters use the getSomething and
+ *   setSomething naming conventions and it is really confusing to seasoned developers when they are
+ *   swapped.  We rarely, if ever, use setters and seeing the setName() method confused me for a moment.
+ *   Correcting this would also keep a potential employer from questioning whether you meant for a getter
+ *   or a setter.  *** USE THE REFACTOR -> RENAME TOOL TO MAKE THIS CHANGE LESS OF A HEADACHE. ***
+ * - The method for get levels has some empty strings ("") in the concatenation.  If you replace them with
+ *   the tab character ("\t") or maybe a pipe ("|") you might end up with a more readable status line.
+ * - Currently the water method increases thirst whenever it is called.  If this is your intent, disregard,
+ *   but I usually equate getting water with lowering my thirst level.
+ *
+ * That's it for this class, it looks pretty great other than those things above.
+ */
 public class VirtualPet {
 
     private String name;
