@@ -12,23 +12,23 @@ public class VirtualPetShelterApp {
 
         VirtualPetShelter bunnyShelter = new VirtualPetShelter();
         bunnyShelter.add(new VirtualPet("Picasso  ", "Speckled Lionhead  ", 10, 10, 25));
-        bunnyShelter.add(new VirtualPet("Dali  ", "Brown MiniLop  ", 5, 10, 18));
+        bunnyShelter.add(new VirtualPet("Dali     ", "Brown MiniLop  ", 5, 10, 18));
         bunnyShelter.add(new VirtualPet("Pollack  ", "Black Lionhead  ", 7, 7, 20));
 
         System.out.println("Welcome to the Columbus Rabbit Rescue");
         System.out.println("Status of the pets is: ");
         System.out.println();
-        System.out.println("Name:" + "Hunger:" + "Thirst:" + "Happiness:");
+        System.out.println("Name:    " +"Description:  " + "Hunger:  " + "Thirst:  " + "Happiness:  ");
         System.out.println(bunnyShelter.showPets());
 
         while (running) {
 
             System.out.println("What would you like to do ?");
             System.out.println("Press 1 to Feed the Pets.");
-            System.out.println("Press 2 to give the Pets a drink.");
-            System.out.println("Press 3 to cuddle the wittle Buns.");
-            System.out.println("Press 4 admit a Bun.");
-            System.out.println("Press 5 to adopt a Bun.");
+            System.out.println("Press 2 to Give the Pets a drink.");
+            System.out.println("Press 3 to Cuddle the Wittle Buns.");
+            System.out.println("Press 4 Admit a Bun.");
+            System.out.println("Press 5 to Adopt a Bun.");
             System.out.println("Press 6 to EXIT and abandon the Buns.");
             String userInput = input.nextLine();
 
@@ -39,7 +39,11 @@ public class VirtualPetShelterApp {
                 bunnyShelter.waterAllPets();
             }
             if (userInput.equals("3")) {
-                bunnyShelter.cuddleAllPets();
+                System.out.println("Which bunny would you like to play with?");
+                System.out.println(bunnyShelter.seeDescription());
+                userChoice = input.nextLine();
+                System.out.println("You have chosen to play with " + userChoice);
+                bunnyShelter.cuddleOnePet(userChoice);
             }
             if (userInput.equals("4")) {
                 String petDescription;
@@ -61,6 +65,8 @@ public class VirtualPetShelterApp {
             if (userInput.equals("6")) {
                 running = false;
             }
+
+            bunnyShelter.tick();
 
         }
 

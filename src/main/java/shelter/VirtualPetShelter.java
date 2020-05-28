@@ -13,7 +13,7 @@ public class VirtualPetShelter {
 
     public String showPets() {
         for (VirtualPet petLevels : getAllPets()) {
-            System.out.println(petLevels.setName() + "" + petLevels.getLevels());
+            System.out.println(petLevels.setName() + petLevels.getDescription()+ "" + petLevels.getLevels());
         }
         return "";
     }
@@ -46,6 +46,11 @@ public class VirtualPetShelter {
         for (VirtualPet petLevels : pets.values()) {
             petLevels.cuddle(15);
         }
+    }
+
+    public void cuddleOnePet(String name){
+        VirtualPet chosenPet = findNewPet(name);
+        chosenPet.cuddle(15);
     }
 
     public String seeDescription() {
