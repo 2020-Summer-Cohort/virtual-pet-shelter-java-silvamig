@@ -20,10 +20,10 @@ public class VirtualPetShelterApp {
         System.out.println("Welcome to the Columbus Rabbit Rescue");
         System.out.println("Status of the pets is: ");
         System.out.println();
-        System.out.println("Name:    " +"Description:  " + "Hunger:  " + "Thirst:  " + "Happiness:  ");
-        System.out.println(bunnyShelter.showPets());
 
         while (running) {
+            System.out.println("Name:    " +"Description:  " + "Hunger:  " + "Thirst:  " + "Happiness:  ");
+            System.out.println(bunnyShelter.showPets());
 
             System.out.println("What would you like to do ?");
             System.out.println("Press 1 to Feed the Pets.");
