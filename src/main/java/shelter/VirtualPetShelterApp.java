@@ -3,14 +3,16 @@ package shelter;
 import java.util.Scanner;
 
 public class VirtualPetShelterApp {
+
     public static void main(String[] args) {
+        VirtualPetShelter bunnyShelter = new VirtualPetShelter();
 
         Scanner input = new Scanner(System.in);
         String userChoice;
 
         boolean running = true;
 
-        VirtualPetShelter bunnyShelter = new VirtualPetShelter();
+
         bunnyShelter.add(new VirtualPet("Picasso  ", "Speckled Lionhead  ", 10, 10, 25));
         bunnyShelter.add(new VirtualPet("Dali     ", "Brown MiniLop  ", 5, 10, 18));
         bunnyShelter.add(new VirtualPet("Pollack  ", "Black Lionhead  ", 7, 7, 20));
@@ -72,4 +74,6 @@ public class VirtualPetShelterApp {
 
 
     }
+
+
 }
